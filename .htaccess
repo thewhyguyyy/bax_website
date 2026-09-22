@@ -1,0 +1,15 @@
+DirectoryIndex index.html
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  # Serve "<path>.html" for extensionless URLs, even when a same-named folder exists
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+  RewriteRule ^(.+?)/?$ /$1.html [L]
+</IfModule>
+ErrorDocument 404 /404.html
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
