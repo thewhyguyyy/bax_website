@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { InstagramIcon, XIcon, LinkedInIcon } from "./SocialIcons";
-import { nav, contact } from "@/content/site";
+import { InstagramIcon, LinkedInIcon } from "./SocialIcons";
+import { nav, contact, socials } from "@/content/site";
 
 export default function Footer() {
   return (
@@ -51,23 +51,19 @@ export default function Footer() {
               {contact.phone}
             </a>
             <div className="mt-4 flex gap-3" aria-label="Social links">
-              {/* PLACEHOLDER: confirm social URLs */}
               <a
-                href="#"
+                href={socials.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Instagram"
                 className="rounded-full bg-white/10 p-2 transition-all duration-300 hover:-translate-y-1 hover:bg-white/20"
               >
                 <InstagramIcon />
               </a>
               <a
-                href="#"
-                aria-label="Twitter / X"
-                className="rounded-full bg-white/10 p-2 transition-all duration-300 hover:-translate-y-1 hover:bg-white/20"
-              >
-                <XIcon />
-              </a>
-              <a
-                href="#"
+                href={socials.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="LinkedIn"
                 className="rounded-full bg-white/10 p-2 transition-all duration-300 hover:-translate-y-1 hover:bg-white/20"
               >

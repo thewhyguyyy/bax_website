@@ -1,6 +1,11 @@
 // Single source of truth for site copy. Edit here, not in components.
 // Items marked PLACEHOLDER still need a real asset or final copy from BAX.
 
+export const socials = {
+  instagram: "https://www.instagram.com/beyond.abilityx",
+  linkedin: "https://www.linkedin.com/company/beyondabilityx/",
+};
+
 export const nav = {
   links: [
     { label: "Home", href: "/" },

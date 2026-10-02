@@ -2,8 +2,8 @@ import Image from "next/image";
 import { Mail, Phone, MapPin } from "lucide-react";
 import InquiryForm from "@/components/InquiryForm";
 import Reveal from "@/components/Reveal";
-import { InstagramIcon, XIcon, LinkedInIcon } from "@/components/SocialIcons";
-import { contact } from "@/content/site";
+import { InstagramIcon, LinkedInIcon } from "@/components/SocialIcons";
+import { contact, socials } from "@/content/site";
 
 export const metadata = {
   title: "Contact Us",
@@ -27,11 +27,15 @@ export default function ContactPage() {
             <ul className="space-y-6">
               <li className="flex items-start gap-3">
                 <Mail size={20} className="mt-0.5 text-purple-600" aria-hidden="true" />
-                <span className="font-body text-sm text-indigo-900/80">{contact.email}</span>
+                <a href={`mailto:${contact.email}`} className="font-body text-sm text-indigo-900/80 hover:text-indigo-900">
+                  {contact.email}
+                </a>
               </li>
               <li className="flex items-start gap-3">
                 <Phone size={20} className="mt-0.5 text-purple-600" aria-hidden="true" />
-                <span className="font-body text-sm text-indigo-900/80">{contact.phone}</span>
+                <a href={`tel:${contact.phone.replace(/\s+/g, "")}`} className="font-body text-sm text-indigo-900/80 hover:text-indigo-900">
+                  {contact.phone}
+                </a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={20} className="mt-0.5 text-purple-600" aria-hidden="true" />
@@ -40,23 +44,19 @@ export default function ContactPage() {
             </ul>
 
             <div className="mt-8 flex gap-3" aria-label="Social links">
-              {/* PLACEHOLDER: confirm social URLs */}
               <a
-                href="#"
+                href={socials.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Instagram"
                 className="rounded-full bg-lavender-50 p-2.5 text-indigo-900 transition-all duration-300 hover:-translate-y-1 hover:bg-indigo-900 hover:text-white"
               >
                 <InstagramIcon />
               </a>
               <a
-                href="#"
-                aria-label="Twitter / X"
-                className="rounded-full bg-lavender-50 p-2.5 text-indigo-900 transition-all duration-300 hover:-translate-y-1 hover:bg-indigo-900 hover:text-white"
-              >
-                <XIcon />
-              </a>
-              <a
-                href="#"
+                href={socials.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="LinkedIn"
                 className="rounded-full bg-lavender-50 p-2.5 text-indigo-900 transition-all duration-300 hover:-translate-y-1 hover:bg-indigo-900 hover:text-white"
               >
