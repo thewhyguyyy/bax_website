@@ -8,6 +8,12 @@ export const nav = {
     { label: "About Us", href: "/about" },
     { label: "Contact Us", href: "/contact" },
     { label: "Get Involved", href: "/get-involved", primary: true },
+    {
+      label: "Register as Athlete",
+      href: "https://rise.beyondabilityx.com",
+      external: true,
+      gold: true,
+    },
   ],
 };
 
@@ -194,7 +200,7 @@ export const home = {
     },
   },
   who: {
-    eyebrow: "Why We Exist",
+    eyebrow: "Our Purpose",
     heading: "Why We Exist",
     body: "India has produced world-class para athletes. It never built an ecosystem around them — until now. We're building the leagues, media, technology, and grassroots pipelines that turn raw talent into professional careers.",
     kicker: "They play for love of the game. We'll let them play for a living.",
@@ -217,14 +223,17 @@ export const home = {
   gallery: {
     eyebrow: "The Gallery",
     heading: "Moments",
-    // PLACEHOLDER: additional gallery images — using existing site photography for now
+    // PLACEHOLDER: more/newer event photos welcome — using existing site photography for now.
+    // (about-feat-1.jpg was dropped: it's byte-identical to bp-2.jpg, a real duplicate.)
     images: [
       { src: "/images/apl-athlete.jpg", alt: "APL athlete in action on the field" },
       { src: "/images/bp-1.jpg", alt: "Beyond Ability X community moment" },
       { src: "/images/bp-2.jpg", alt: "Beyond Ability X community moment" },
       { src: "/images/bp-3.jpg", alt: "Beyond Ability X community moment" },
-      { src: "/images/about-feat-1.jpg", alt: "Athlete training session" },
-      { src: "/images/about-feat-2.jpg", alt: "Athletes on field together" },
+      { src: "/images/about-feat-2.jpg", alt: "Close-up of a BAX team jersey" },
+      { src: "/images/about-hero.jpg", alt: "BAX athletes warming up before a match" },
+      { src: "/images/partnership-hero.jpg", alt: "A BAX athlete bowling mid-delivery" },
+      { src: "/images/partnership-why.jpg", alt: "A BAX match in progress" },
     ],
   },
 };

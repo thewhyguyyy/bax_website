@@ -10,7 +10,7 @@ import { useReducedMotion } from "framer-motion";
  * prefers-reduced-motion is set, since continuous auto-motion is exactly
  * what that preference asks us to avoid.
  */
-export default function Carousel({ items, renderItem, ariaLabel, itemClassName, intervalMs = 3500 }) {
+export default function Carousel({ items, renderItem, ariaLabel, itemClassName, intervalMs = 2000 }) {
   const trackRef = useRef(null);
   const [paused, setPaused] = useState(false);
   const shouldReduceMotion = useReducedMotion();
