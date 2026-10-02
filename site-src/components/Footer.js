@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { InstagramIcon, LinkedInIcon } from "./SocialIcons";
-import { nav, contact, socials } from "@/content/site";
+import { nav, contact, socials, teamFootnote } from "@/content/site";
 
 export default function Footer() {
   return (
@@ -73,8 +73,13 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-white/10 pt-6 text-center font-body text-xs text-white/50">
-          © {new Date().getFullYear()} Beyond Ability X. All rights reserved.
+        <div className="mt-12 border-t border-white/10 pt-6 text-center">
+          <p className="font-body text-xs text-white/50">
+            <span className="font-bold text-coral-500">*</span> {teamFootnote.replace(/^\*/, "")}
+          </p>
+          <p className="mt-2 font-body text-xs text-white/50">
+            © {new Date().getFullYear()} Beyond Ability X. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

@@ -11,7 +11,7 @@ import CTABand from "@/components/CTABand";
 import Reveal from "@/components/Reveal";
 import Link from "next/link";
 import { Play } from "lucide-react";
-import { home, events, partners, mission, team, homeTeamSlugs, whatWeDo, teamFootnote } from "@/content/site";
+import { home, events, partners, mission, team, homeTeamSlugs, whatWeDo } from "@/content/site";
 
 export const metadata = {
   title: "Beyond Ability X — Every Athlete Has a Story",
@@ -134,9 +134,6 @@ export default function HomePage() {
           <Reveal delay={0.1} className="mt-12">
             <TeamCarousel people={homeTeam} />
           </Reveal>
-          <p className="mt-6 text-center font-body text-xs text-indigo-900/70">
-            <span className="font-bold text-coral-500">*</span> {teamFootnote.replace(/^\*/, "")}
-          </p>
           <p className="mt-6 text-center">
             <Link
               href="/about#team"
