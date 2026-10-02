@@ -14,7 +14,7 @@ export default function PersonCard({ person, compact = false }) {
       </div>
       <h3 className="mt-4 font-display text-sm font-bold uppercase tracking-wide text-indigo-900">
         {person.name}
-        {person.advisor && <span aria-hidden="true">*</span>}
+        {person.advisor && <span className="text-coral-500">*</span>}
       </h3>
       <p className="mt-1 font-body text-xs font-semibold text-purple-600">{person.role}</p>
       {!compact && person.category && (

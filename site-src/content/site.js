@@ -136,7 +136,7 @@ export const partners = [
   },
   {
     slug: "rdca",
-    name: "Rajasthan Disable (Differently Abled) Cricket Association",
+    name: "Rajasthan Differently Abled Cricket Council",
     short: "RDCA",
     logo: "/images/partners/rdca-v2.png",
     url: "https://www.rdca.info",
@@ -223,7 +223,7 @@ export const home = {
     heading: "In Action",
   },
   associations: {
-    heading: "In Association With",
+    heading: "Partnerships",
   },
   gallery: {
     eyebrow: "The Gallery",
@@ -360,8 +360,7 @@ export const contact = {
   image: { src: "/images/partnership-why.jpg", alt: "A BAX match in progress" },
   email: "partnership@beyondabilityx.com",
   phone: "+91 70116 71272",
-  // PLACEHOLDER: confirm office/city location
-  location: "[PLACEHOLDER: city, country]",
+  location: "KGK Lehriya, Malviya Nagar, Jaipur 302016",
   formFields: [
     { name: "name", label: "Name", required: true, autoComplete: "name" },
     { name: "email", label: "Email", type: "email", required: true, autoComplete: "email" },

@@ -140,8 +140,8 @@ export default function AboutPage() {
               </Reveal>
             ))}
           </div>
-          <p className="mt-12 text-center font-body text-xs italic text-indigo-900/50">
-            {teamFootnote}
+          <p className="mt-12 text-center font-body text-xs text-indigo-900/70">
+            <span className="font-bold text-coral-500">*</span> {teamFootnote.replace(/^\*/, "")}
           </p>
         </div>
       </section>
