@@ -203,3 +203,209 @@ export const home = {
     ],
   },
 };
+
+export const about = {
+  reality: {
+    eyebrow: "The Reality",
+    headingPrefix: "One Para Athlete. ",
+    headingHighlight: "Two Lives.",
+    onGround: {
+      label: "On The Ground",
+      items: [
+        { title: "Ambitious", body: "Driven by dreams of gold" },
+        { title: "Spirited", body: "Fighting against every odd" },
+        { title: "Energetic", body: "Pushing physical limits" },
+        { title: "Optimistic", body: "Believing in possibility" },
+      ],
+    },
+    offGround: {
+      label: "Off The Ground",
+      items: [
+        { title: "Invisible", body: "No recognition" },
+        { title: "Struggling", body: "Financial hardships daily" },
+        { title: "Isolated", body: "Limited facilities" },
+        { title: "Overlooked", body: "No career path and opportunities" },
+      ],
+    },
+    closing: "We exist to bridge this gap.",
+  },
+  problem: {
+    eyebrow: "The Problem",
+    headingPrefix: "India created ",
+    headingHighlight: "WORLD-CLASS PARA ATHLETES",
+    headingSuffix: " — but no ecosystem was built around them.",
+    stats: [
+      {
+        number: "0.5%",
+        label: "Media Visibility",
+        detail: "Differently-abled athletes receive <0.5% of sports media coverage.",
+        subBullets: ["No visibility", "No fandom", "No commercial value"],
+      },
+      {
+        number: "0",
+        label: "Professional Leagues",
+        detail:
+          "29 medals at Paris 2024, yet no domestic league exists for differently-abled athletes in India.",
+        subBullets: ["No auctions", "No contracts", "No broadcast systems"],
+      },
+      {
+        number: "<1%",
+        label: "Athlete Earnings",
+        detail: "Earn a livelihood via sport. Most retire early and enter poverty.",
+        subBullets: ["No sponsorships", "No contracts", "No livelihood"],
+      },
+    ],
+    closing: "They play for love of the game. We will let them play for a living.",
+  },
+  team: {
+    heading: "The People Behind BAX",
+  },
+  partnerships: {
+    heading: "Partnerships",
+  },
+};
+
+export const getInvolved = {
+  hero: {
+    heading: "Invest in the Future of Inclusive Sports.",
+    subhead: "A new category is being built. Early believers will shape it.",
+  },
+  ways: [
+    {
+      slug: "invest",
+      title: "Invest",
+      body: "Back India's first inclusive sports ecosystem.",
+    },
+    {
+      slug: "sponsor",
+      title: "Sponsor / Partner",
+      body: "Put your brand behind athletes who've never had commercial backing.",
+    },
+    {
+      slug: "hire",
+      title: "Hire Athletes",
+      body: "Tap the hiring ecosystem and corporate-jobs pipeline.",
+    },
+    {
+      slug: "coach",
+      title: "Coach / Volunteer",
+      body: "Join the academy and grassroots development.",
+    },
+    {
+      slug: "media",
+      title: "Media & Content",
+      body: "Collaborate on Ability Originals storytelling.",
+    },
+  ],
+  formFields: [
+    { name: "name", label: "Name", required: true, autoComplete: "name" },
+    { name: "email", label: "Email", type: "email", required: true, autoComplete: "email" },
+    { name: "organisation", label: "Organisation", autoComplete: "organization" },
+    {
+      name: "interest",
+      label: "Interest",
+      type: "select",
+      required: true,
+      options: ["Invest", "Sponsor / Partner", "Hire Athletes", "Coach / Volunteer", "Media & Content"],
+    },
+    { name: "message", label: "Message", type: "textarea", required: true },
+  ],
+};
+
+export const contact = {
+  heading: "Get in Touch.",
+  // PLACEHOLDER: confirm real contact details
+  email: "[PLACEHOLDER: contact email]",
+  phone: "[PLACEHOLDER: phone number]",
+  location: "[PLACEHOLDER: city, country]",
+  formFields: [
+    { name: "name", label: "Name", required: true, autoComplete: "name" },
+    { name: "email", label: "Email", type: "email", required: true, autoComplete: "email" },
+    { name: "subject", label: "Subject", required: true },
+    { name: "message", label: "Message", type: "textarea", required: true },
+  ],
+};
+
+export const whatWeDo = {
+  intro: {
+    heading: "One platform. Multiple engines.",
+    subhead:
+      "Every pillar strengthens the others — creating a defensible ecosystem around athletes, fandom, and inclusive sports infrastructure.",
+  },
+  pillars: [
+    {
+      slug: "ability-leagues",
+      icon: "Trophy",
+      title: "Ability Leagues",
+      body: "Owns the core sports IP. Franchise model, media rights, sponsorships, athlete economy.",
+      tag: "IP Creation",
+    },
+    {
+      slug: "ability-academy",
+      icon: "GraduationCap",
+      title: "Ability Academy",
+      body: "Creates the next generation of talent. Certifications, grassroots training, digital learning.",
+      tag: "Talent Pipeline",
+    },
+    {
+      slug: "ability-originals",
+      icon: "Clapperboard",
+      title: "Ability Originals",
+      body: "Turns athletes into national stories. OTT, YouTube, documentaries, branded content.",
+      tag: "Storytelling & Distribution",
+    },
+    {
+      slug: "ability-festival",
+      icon: "PartyPopper",
+      title: "Ability Festival",
+      body: "Creates cultural legitimacy. National recognition platform and events for athletes and inclusion leaders.",
+      tag: "Recognition & Legacy",
+    },
+    {
+      slug: "ability-tech",
+      icon: "Cpu",
+      title: "Ability Tech",
+      body: "Builds the data and engagement layer. Athlete registry, fantasy gaming, analytics, hiring marketplace.",
+      tag: "Data & Engagement",
+    },
+    {
+      slug: "ability-store",
+      icon: "ShoppingBag",
+      title: "Ability Store",
+      body: "Monetizes fandom and identity. Adaptive sportswear, merchandise, retail partnerships.",
+      tag: "Merch & Retail",
+    },
+  ],
+  flagshipIPs: {
+    heading: "Two Flagship IPs. One Global Sports Platform.",
+    items: [
+      {
+        slug: "disability-asia-cup",
+        title: "Disability Asia Cup",
+        term: "5-Year IP Owned",
+        body: "A recurring international disability cricket property bringing leading Asian teams, athletes, sponsors and audiences onto one competitive platform.",
+        facts: [
+          "Asia-wide participation",
+          "Broadcast ready",
+          "TV / OTT / digital distribution",
+          "Brand & sponsor platform",
+          "Recurring commercial inventory across seasons",
+        ],
+      },
+      {
+        slug: "axpl-league",
+        title: "AxPL (League)",
+        term: "10-Year IP Owned",
+        body: "An IPL-style, franchise-led disability cricket league built to professionalise adaptive sport and build scalable commercial value.",
+        facts: [
+          "6 franchise teams",
+          "City-based ownership",
+          "90+ athletes",
+          "16+ matches",
+          "Season 1 rollout",
+          "₹18.4 Cr projected Year-1 revenue",
+        ],
+      },
+    ],
+  },
+};
