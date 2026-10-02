@@ -21,7 +21,11 @@ export default function Nav({ variant = "light" }) {
         aria-label="Primary"
         className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8"
       >
-        <Link href="/" className="flex items-center gap-2" aria-label="Beyond Ability X — Home">
+        <Link
+          href="/"
+          className="flex items-center gap-2 transition-transform duration-300 hover:scale-105"
+          aria-label="Beyond Ability X — Home"
+        >
           <Image
             src={isDark ? "/images/logo/logo-white.png" : "/images/logo/logo-purple.png"}
             alt="Beyond Ability X"
@@ -39,20 +43,26 @@ export default function Nav({ variant = "light" }) {
               {link.primary ? (
                 <Link
                   href={link.href}
-                  className="rounded-full bg-coral-500 px-5 py-2.5 font-display text-sm font-bold uppercase tracking-wide text-white transition-transform hover:-translate-y-0.5"
+                  className="rounded-full bg-coral-500 px-5 py-2.5 font-display text-sm font-bold uppercase tracking-wide text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(255,107,122,0.45)]"
                 >
                   {link.label}
                 </Link>
               ) : (
                 <Link
                   href={link.href}
-                  className={`font-body text-sm font-medium transition-colors ${
+                  className={`group relative font-body text-sm font-medium transition-colors ${
                     isDark
                       ? "text-white/80 hover:text-white"
                       : "text-indigo-900/70 hover:text-indigo-900"
                   }`}
                 >
                   {link.label}
+                  <span
+                    aria-hidden="true"
+                    className={`absolute -bottom-1 left-0 h-0.5 w-full origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100 ${
+                      isDark ? "bg-white" : "bg-coral-500"
+                    }`}
+                  />
                 </Link>
               )}
             </li>

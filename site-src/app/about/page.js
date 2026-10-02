@@ -1,9 +1,11 @@
+import Image from "next/image";
 import { Check, X as XIcon } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import StatCard from "@/components/StatCard";
 import PersonCard from "@/components/PersonCard";
 import LogoStrip from "@/components/LogoStrip";
 import CTABand from "@/components/CTABand";
+import Reveal from "@/components/Reveal";
 import { about, team, teamFootnote, partners } from "@/content/site";
 
 export const metadata = {
@@ -17,17 +19,40 @@ export default function AboutPage() {
 
   return (
     <>
+      {/* Banner image */}
+      <div className="relative h-[40vh] min-h-[280px] w-full overflow-hidden bg-indigo-900">
+        <Image
+          src={about.heroImage.src}
+          alt={about.heroImage.alt}
+          fill
+          priority
+          className="object-cover"
+        />
+        <div
+          aria-hidden="true"
+          className="absolute inset-0"
+          style={{ background: "linear-gradient(0deg, rgba(35,17,82,0.85) 0%, rgba(35,17,82,0.35) 100%)" }}
+        />
+        <div className="relative z-10 flex h-full items-end">
+          <h1 className="mx-auto w-full max-w-6xl px-4 pb-10 font-display text-3xl font-bold uppercase tracking-tight text-white sm:px-6 sm:text-4xl lg:px-8">
+            About Beyond Ability X
+          </h1>
+        </div>
+      </div>
+
       {/* 5.1 The Reality */}
       <section className="bg-white py-20">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            eyebrow={reality.eyebrow}
-            heading={reality.headingPrefix}
-            highlight={reality.headingHighlight}
-          />
+          <Reveal>
+            <SectionHeading
+              eyebrow={reality.eyebrow}
+              heading={reality.headingPrefix}
+              highlight={reality.headingHighlight}
+            />
+          </Reveal>
 
           <div className="mt-14 grid gap-8 sm:grid-cols-2">
-            <div className="rounded-2xl bg-lavender-50 p-8">
+            <Reveal delay={0.1} className="rounded-2xl bg-lavender-50 p-8 transition-shadow duration-300 hover:shadow-lg">
               <h3 className="font-display text-xs font-bold uppercase tracking-widest text-indigo-900/50">
                 {reality.onGround.label}
               </h3>
@@ -44,9 +69,9 @@ export default function AboutPage() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </Reveal>
 
-            <div className="rounded-2xl bg-indigo-900/5 p-8">
+            <Reveal delay={0.2} className="rounded-2xl bg-indigo-900/5 p-8 transition-shadow duration-300 hover:shadow-lg">
               <h3 className="font-display text-xs font-bold uppercase tracking-widest text-coral-500">
                 {reality.offGround.label}
               </h3>
@@ -63,7 +88,7 @@ export default function AboutPage() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </Reveal>
           </div>
 
           <p className="mt-12 text-center font-display text-xl font-bold uppercase text-indigo-900">
@@ -75,20 +100,24 @@ export default function AboutPage() {
       {/* 5.2 The Problem */}
       <section className="bg-lavender-50 py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="mb-3 font-display text-xs font-bold uppercase tracking-[0.2em] text-coral-500">
-              {problem.eyebrow}
-            </p>
-            <h2 className="font-display text-3xl font-bold uppercase leading-tight tracking-tight text-indigo-900 sm:text-4xl">
-              {problem.headingPrefix}
-              <span className="text-coral-500">{problem.headingHighlight}</span>
-              {problem.headingSuffix}
-            </h2>
-          </div>
+          <Reveal>
+            <div className="mx-auto max-w-3xl text-center">
+              <p className="mb-3 font-display text-xs font-bold uppercase tracking-[0.2em] text-coral-500">
+                {problem.eyebrow}
+              </p>
+              <h2 className="font-display text-3xl font-bold uppercase leading-tight tracking-tight text-indigo-900 sm:text-4xl">
+                {problem.headingPrefix}
+                <span className="text-coral-500">{problem.headingHighlight}</span>
+                {problem.headingSuffix}
+              </h2>
+            </div>
+          </Reveal>
 
           <div className="mt-12 grid gap-6 sm:grid-cols-3">
-            {problem.stats.map((stat) => (
-              <StatCard key={stat.label} {...stat} />
+            {problem.stats.map((stat, i) => (
+              <Reveal key={stat.label} delay={i * 0.1}>
+                <StatCard {...stat} />
+              </Reveal>
             ))}
           </div>
 
@@ -101,10 +130,14 @@ export default function AboutPage() {
       {/* 5.3 Team */}
       <section id="team" className="scroll-mt-20 bg-white py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <SectionHeading heading={about.team.heading} />
+          <Reveal>
+            <SectionHeading heading={about.team.heading} />
+          </Reveal>
           <div className="mt-14 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-4">
-            {team.map((person) => (
-              <PersonCard key={person.slug} person={person} />
+            {team.map((person, i) => (
+              <Reveal key={person.slug} delay={(i % 4) * 0.08}>
+                <PersonCard person={person} />
+              </Reveal>
             ))}
           </div>
           <p className="mt-12 text-center font-body text-xs italic text-indigo-900/50">

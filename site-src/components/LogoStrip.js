@@ -10,7 +10,7 @@ export default function LogoStrip({ items }) {
             alt={item.name}
             width={88}
             height={88}
-            className="h-16 w-16 object-contain grayscale transition-all duration-300 hover:grayscale-0 sm:h-20 sm:w-20"
+            className="h-16 w-16 object-contain grayscale transition-all duration-300 hover:scale-110 hover:grayscale-0 sm:h-20 sm:w-20"
           />
         );
         return (

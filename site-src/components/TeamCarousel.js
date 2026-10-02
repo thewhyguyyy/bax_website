@@ -39,7 +39,7 @@ export default function TeamCarousel({ people }) {
           type="button"
           onClick={() => scrollByCard(-1)}
           aria-label="Previous team member"
-          className="rounded-full bg-lavender-50 p-3 text-indigo-900 hover:bg-indigo-900 hover:text-white"
+          className="rounded-full bg-lavender-50 p-3 text-indigo-900 transition-all duration-300 hover:-translate-y-0.5 hover:bg-indigo-900 hover:text-white"
         >
           <ChevronLeft size={20} />
         </button>
@@ -47,7 +47,7 @@ export default function TeamCarousel({ people }) {
           type="button"
           onClick={() => scrollByCard(1)}
           aria-label="Next team member"
-          className="rounded-full bg-lavender-50 p-3 text-indigo-900 hover:bg-indigo-900 hover:text-white"
+          className="rounded-full bg-lavender-50 p-3 text-indigo-900 transition-all duration-300 hover:-translate-y-0.5 hover:bg-indigo-900 hover:text-white"
         >
           <ChevronRight size={20} />
         </button>

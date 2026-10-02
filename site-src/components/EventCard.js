@@ -2,10 +2,15 @@ import Image from "next/image";
 
 export default function EventCard({ event }) {
   return (
-    <article className="overflow-hidden rounded-2xl bg-lavender-50">
-      <div className="relative aspect-[4/3] w-full bg-indigo-900/10">
+    <article className="group overflow-hidden rounded-2xl bg-lavender-50 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl">
+      <div className="relative aspect-[4/3] w-full overflow-hidden bg-indigo-900/10">
         {event.image ? (
-          <Image src={event.image} alt={event.title} fill className="object-cover" />
+          <Image
+            src={event.image}
+            alt={event.imageAlt ?? event.title}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-110"
+          />
         ) : (
           <div
             className="flex h-full w-full items-center justify-center font-body text-xs text-indigo-900/40"

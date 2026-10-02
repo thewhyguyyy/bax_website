@@ -1,14 +1,16 @@
 export default function PillarCard({ title, body, highlight = false, Icon, tag }) {
   return (
     <div
-      className={`rounded-2xl p-7 transition-transform duration-300 hover:-translate-y-1 ${
+      className={`group rounded-2xl p-7 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl ${
         highlight ? "bg-gold-500 text-indigo-900" : "bg-lavender-50 text-indigo-900"
       }`}
     >
       {Icon && (
         <Icon
           size={28}
-          className={highlight ? "text-indigo-900" : "text-purple-600"}
+          className={`transition-transform duration-300 group-hover:scale-110 ${
+            highlight ? "text-indigo-900" : "text-purple-600"
+          }`}
           aria-hidden="true"
         />
       )}

@@ -21,7 +21,7 @@ export const team = [
   {
     slug: "rohit-jhalani",
     name: "Rohit Jhalani",
-    role: "Co-Founder",
+    role: "Co-Founder, Athlete Advisory",
     category: "Athlete Development",
     descriptor:
       "14 yrs First-Class Cricketer; Ranji & Irani Trophy winner; mentor, India Men's Mixed Disability Team.",
@@ -163,8 +163,9 @@ export const events = [
     slug: "pd-challengers-trophy-2024",
     title: "PD Challengers Trophy 2024",
     year: "2024",
-    blurb: null, // PLACEHOLDER
-    image: null, // PLACEHOLDER
+    blurb: null, // PLACEHOLDER: event description
+    image: "/images/contact-hero.jpg", // confirmed authentic — "Challengers Trophy 2024" visible on the stumps
+    imageAlt: "A bowled wicket at the PD Challengers Trophy 2024",
   },
 ];
 
@@ -177,7 +178,11 @@ export const home = {
     subhead: "A new category is being built. Early believers will shape it.",
     pills: ["Sports", "Media", "Technology", "Community", "Impact"],
     primaryCta: { label: "Get Involved", href: "/get-involved" },
-    secondaryCta: { label: "Invest in the Future of Inclusive Sports", href: "/get-involved" },
+    secondaryCta: {
+      label: "Register as Athlete",
+      href: "https://rise.beyondabilityx.com",
+      external: true,
+    },
   },
   who: {
     heading: "Who is Beyond Ability X?",
@@ -205,6 +210,7 @@ export const home = {
 };
 
 export const about = {
+  heroImage: { src: "/images/about-hero.jpg", alt: "BAX athletes warming up before a match" },
   reality: {
     eyebrow: "The Reality",
     headingPrefix: "One Para Athlete. ",
@@ -269,7 +275,9 @@ export const getInvolved = {
   hero: {
     heading: "Invest in the Future of Inclusive Sports.",
     subhead: "A new category is being built. Early believers will shape it.",
+    image: { src: "/images/partnership-hero.jpg", alt: "A BAX athlete bowling mid-delivery" },
   },
+  waysImage: { src: "/images/about-feat-2.jpg", alt: "Close-up of a BAX team jersey" },
   ways: [
     {
       slug: "invest",
@@ -314,6 +322,7 @@ export const getInvolved = {
 
 export const contact = {
   heading: "Get in Touch.",
+  image: { src: "/images/partnership-why.jpg", alt: "A BAX match in progress" },
   // PLACEHOLDER: confirm real contact details
   email: "[PLACEHOLDER: contact email]",
   phone: "[PLACEHOLDER: phone number]",
@@ -331,6 +340,7 @@ export const whatWeDo = {
     heading: "One platform. Multiple engines.",
     subhead:
       "Every pillar strengthens the others — creating a defensible ecosystem around athletes, fandom, and inclusive sports infrastructure.",
+    image: { src: "/images/bp-3.jpg", alt: "A BAX fielder leaping for a catch" },
   },
   pillars: [
     {

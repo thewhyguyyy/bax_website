@@ -6,6 +6,7 @@ import LogoStrip from "@/components/LogoStrip";
 import TeamCarousel from "@/components/TeamCarousel";
 import Gallery from "@/components/Gallery";
 import CTABand from "@/components/CTABand";
+import Reveal from "@/components/Reveal";
 import Link from "next/link";
 import { home, events, partners, mission, team, homeTeamSlugs } from "@/content/site";
 
@@ -25,23 +26,29 @@ export default function HomePage() {
       {/* 3.2 Who is BAX */}
       <section className="bg-white py-20">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="font-display text-3xl font-bold uppercase tracking-tight text-indigo-900 sm:text-4xl">
-            {home.who.heading}
-          </h2>
-          <p className="mt-6 font-body text-base leading-relaxed text-indigo-900/70 sm:text-lg">
-            {home.who.body}
-          </p>
-          <p className="mt-6 font-body text-base italic text-coral-500">{home.who.kicker}</p>
+          <Reveal>
+            <h2 className="font-display text-3xl font-bold uppercase tracking-tight text-indigo-900 sm:text-4xl">
+              {home.who.heading}
+            </h2>
+            <p className="mt-6 font-body text-base leading-relaxed text-indigo-900/70 sm:text-lg">
+              {home.who.body}
+            </p>
+            <p className="mt-6 font-body text-base italic text-coral-500">{home.who.kicker}</p>
+          </Reveal>
         </div>
       </section>
 
       {/* 3.3 In Action */}
       <section className="bg-lavender-50 py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionHeading heading={home.inAction.heading} />
+          <Reveal>
+            <SectionHeading heading={home.inAction.heading} />
+          </Reveal>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {events.map((event) => (
-              <EventCard key={event.slug} event={event} />
+            {events.map((event, i) => (
+              <Reveal key={event.slug} delay={i * 0.1}>
+                <EventCard event={event} />
+              </Reveal>
             ))}
           </div>
         </div>
@@ -50,30 +57,31 @@ export default function HomePage() {
       {/* 3.4 Credibility / Associations */}
       <section className="bg-white py-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <p className="mb-10 text-center font-display text-xs font-bold uppercase tracking-[0.2em] text-indigo-900/50">
-            {home.associations.heading}
-          </p>
-          <LogoStrip items={partners} />
+          <Reveal>
+            <p className="mb-10 text-center font-display text-xs font-bold uppercase tracking-[0.2em] text-indigo-900/50">
+              {home.associations.heading}
+            </p>
+            <LogoStrip items={partners} />
+          </Reveal>
         </div>
       </section>
 
       {/* 3.5 Our Mission */}
       <section className="bg-white py-20">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            eyebrow={mission.eyebrow}
-            heading="We are"
-            highlight={mission.headingHighlight}
-            intro={mission.intro}
-          />
+          <Reveal>
+            <SectionHeading
+              eyebrow={mission.eyebrow}
+              heading="We are"
+              highlight={mission.headingHighlight}
+              intro={mission.intro}
+            />
+          </Reveal>
           <div className="mt-12 grid gap-5 sm:grid-cols-2">
-            {mission.pillars.map((pillar) => (
-              <PillarCard
-                key={pillar.title}
-                title={pillar.title}
-                body={pillar.body}
-                highlight={pillar.highlight}
-              />
+            {mission.pillars.map((pillar, i) => (
+              <Reveal key={pillar.title} delay={i * 0.08}>
+                <PillarCard title={pillar.title} body={pillar.body} highlight={pillar.highlight} />
+              </Reveal>
             ))}
           </div>
           <p className="mt-10 text-center font-display text-lg font-bold uppercase text-indigo-900">
@@ -85,14 +93,16 @@ export default function HomePage() {
       {/* 3.6 Team slider */}
       <section className="bg-lavender-50 py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <SectionHeading heading="The People Behind BAX" />
-          <div className="mt-12">
+          <Reveal>
+            <SectionHeading heading="The People Behind BAX" />
+          </Reveal>
+          <Reveal delay={0.1} className="mt-12">
             <TeamCarousel people={homeTeam} />
-          </div>
+          </Reveal>
           <p className="mt-8 text-center">
             <Link
               href="/about#team"
-              className="font-display text-sm font-bold uppercase tracking-widest text-purple-600 hover:text-indigo-900"
+              className="font-display text-sm font-bold uppercase tracking-widest text-purple-600 underline-offset-4 transition-colors hover:text-coral-500 hover:underline"
             >
               Meet the full team →
             </Link>
@@ -103,10 +113,12 @@ export default function HomePage() {
       {/* 3.7 Gallery */}
       <section className="bg-white py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <SectionHeading heading={home.gallery.heading} />
-          <div className="mt-12">
+          <Reveal>
+            <SectionHeading heading={home.gallery.heading} />
+          </Reveal>
+          <Reveal delay={0.1} className="mt-12">
             <Gallery images={home.gallery.images} />
-          </div>
+          </Reveal>
         </div>
       </section>
 

@@ -14,7 +14,7 @@ export default function Footer() {
               alt="Beyond Ability X"
               width={180}
               height={50}
-              className="mb-4 h-10 w-auto"
+              className="mb-4 h-10 w-auto transition-transform duration-300 hover:scale-105"
             />
             <p className="font-body text-sm italic text-white/70">Every Athlete Has a Story</p>
           </div>
@@ -46,21 +46,21 @@ export default function Footer() {
               <a
                 href="#"
                 aria-label="Instagram"
-                className="rounded-full bg-white/10 p-2 hover:bg-white/20"
+                className="rounded-full bg-white/10 p-2 transition-all duration-300 hover:-translate-y-1 hover:bg-white/20"
               >
                 <InstagramIcon />
               </a>
               <a
                 href="#"
                 aria-label="Twitter / X"
-                className="rounded-full bg-white/10 p-2 hover:bg-white/20"
+                className="rounded-full bg-white/10 p-2 transition-all duration-300 hover:-translate-y-1 hover:bg-white/20"
               >
                 <XIcon />
               </a>
               <a
                 href="#"
                 aria-label="LinkedIn"
-                className="rounded-full bg-white/10 p-2 hover:bg-white/20"
+                className="rounded-full bg-white/10 p-2 transition-all duration-300 hover:-translate-y-1 hover:bg-white/20"
               >
                 <LinkedInIcon />
               </a>

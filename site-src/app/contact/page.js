@@ -1,5 +1,7 @@
+import Image from "next/image";
 import { Mail, Phone, MapPin } from "lucide-react";
 import InquiryForm from "@/components/InquiryForm";
+import Reveal from "@/components/Reveal";
 import { InstagramIcon, XIcon, LinkedInIcon } from "@/components/SocialIcons";
 import { contact } from "@/content/site";
 
@@ -10,14 +12,18 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <section className="bg-white py-20">
+    <section className="overflow-hidden bg-white py-20">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <h1 className="font-display text-4xl font-bold uppercase tracking-tight text-indigo-900 sm:text-5xl">
+        <Reveal as="h1" className="font-display text-4xl font-bold uppercase tracking-tight text-indigo-900 sm:text-5xl">
           {contact.heading}
-        </h1>
+        </Reveal>
 
         <div className="mt-14 grid gap-12 lg:grid-cols-2">
-          <div>
+          <Reveal>
+            <div className="relative mb-8 aspect-[16/10] overflow-hidden rounded-3xl">
+              <Image src={contact.image.src} alt={contact.image.alt} fill className="object-cover" />
+            </div>
+
             <ul className="space-y-6">
               <li className="flex items-start gap-3">
                 <Mail size={20} className="mt-0.5 text-purple-600" aria-hidden="true" />
@@ -38,28 +44,30 @@ export default function ContactPage() {
               <a
                 href="#"
                 aria-label="Instagram"
-                className="rounded-full bg-lavender-50 p-2.5 text-indigo-900 hover:bg-indigo-900 hover:text-white"
+                className="rounded-full bg-lavender-50 p-2.5 text-indigo-900 transition-all duration-300 hover:-translate-y-1 hover:bg-indigo-900 hover:text-white"
               >
                 <InstagramIcon />
               </a>
               <a
                 href="#"
                 aria-label="Twitter / X"
-                className="rounded-full bg-lavender-50 p-2.5 text-indigo-900 hover:bg-indigo-900 hover:text-white"
+                className="rounded-full bg-lavender-50 p-2.5 text-indigo-900 transition-all duration-300 hover:-translate-y-1 hover:bg-indigo-900 hover:text-white"
               >
                 <XIcon />
               </a>
               <a
                 href="#"
                 aria-label="LinkedIn"
-                className="rounded-full bg-lavender-50 p-2.5 text-indigo-900 hover:bg-indigo-900 hover:text-white"
+                className="rounded-full bg-lavender-50 p-2.5 text-indigo-900 transition-all duration-300 hover:-translate-y-1 hover:bg-indigo-900 hover:text-white"
               >
                 <LinkedInIcon />
               </a>
             </div>
-          </div>
+          </Reveal>
 
-          <InquiryForm formName="Contact" fields={contact.formFields} submitLabel="Send Message" />
+          <Reveal delay={0.1}>
+            <InquiryForm formName="Contact" fields={contact.formFields} submitLabel="Send Message" />
+          </Reveal>
         </div>
       </div>
     </section>
