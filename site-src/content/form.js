@@ -1,4 +1,2 @@
-// Set this once BAX sets up the Google Apps Script Web App (see instructions
-// given alongside this file). Until then the form renders fully but shows an
-// honest "not connected yet" state instead of pretending to submit.
-export const FORM_ENDPOINT = null; // e.g. "https://script.google.com/macros/s/XXXX/exec"
+export const FORM_ENDPOINT =
+  "https://script.google.com/macros/s/AKfycbzyCryiW4T-GOt87f5Hkd-9y5gikFlcW8LzK8R0QyXfpCKwv2-GgiIYRoOQKOU78aw/exec";
