@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { InstagramIcon, XIcon, LinkedInIcon } from "./SocialIcons";
-import { nav } from "@/content/site";
+import { nav, contact } from "@/content/site";
 
 export default function Footer() {
   return (
@@ -38,9 +38,18 @@ export default function Footer() {
             <h2 className="mb-4 font-display text-xs font-bold uppercase tracking-widest text-coral-500">
               Connect
             </h2>
-            {/* PLACEHOLDER: confirm email, phone, location */}
-            <p className="font-body text-sm text-white/70">[PLACEHOLDER: contact email]</p>
-            <p className="mt-1 font-body text-sm text-white/70">[PLACEHOLDER: phone]</p>
+            <a
+              href={`mailto:${contact.email}`}
+              className="block font-body text-sm text-white/70 transition-colors hover:text-white"
+            >
+              {contact.email}
+            </a>
+            <a
+              href={`tel:${contact.phone.replace(/\s+/g, "")}`}
+              className="mt-1 block font-body text-sm text-white/70 transition-colors hover:text-white"
+            >
+              {contact.phone}
+            </a>
             <div className="mt-4 flex gap-3" aria-label="Social links">
               {/* PLACEHOLDER: confirm social URLs */}
               <a

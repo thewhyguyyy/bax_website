@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Hero from "@/components/Hero";
 import SectionHeading from "@/components/SectionHeading";
 import PillarCard from "@/components/PillarCard";
@@ -8,6 +9,7 @@ import Gallery from "@/components/Gallery";
 import CTABand from "@/components/CTABand";
 import Reveal from "@/components/Reveal";
 import Link from "next/link";
+import { Play } from "lucide-react";
 import { home, events, partners, mission, team, homeTeamSlugs } from "@/content/site";
 
 export const metadata = {
@@ -24,8 +26,8 @@ export default function HomePage() {
       <Hero />
 
       {/* 3.2 Who is BAX */}
-      <section className="bg-white py-20">
-        <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+      <section className="overflow-hidden bg-white py-20">
+        <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <Reveal>
             <h2 className="font-display text-3xl font-bold uppercase tracking-tight text-indigo-900 sm:text-4xl">
               {home.who.heading}
@@ -34,6 +36,14 @@ export default function HomePage() {
               {home.who.body}
             </p>
             <p className="mt-6 font-body text-base italic text-coral-500">{home.who.kicker}</p>
+          </Reveal>
+          <Reveal delay={0.15} className="relative aspect-[4/3] overflow-hidden rounded-3xl">
+            <Image
+              src={home.who.image.src}
+              alt={home.who.image.alt}
+              fill
+              className="object-cover"
+            />
           </Reveal>
         </div>
       </section>
@@ -108,6 +118,43 @@ export default function HomePage() {
             </Link>
           </p>
         </div>
+      </section>
+
+      {/* Player Stories */}
+      <section className="relative overflow-hidden bg-indigo-900 py-24 text-white">
+        <Image
+          src={home.playerStories.image.src}
+          alt={home.playerStories.image.alt}
+          fill
+          className="object-cover opacity-25"
+        />
+        <div
+          aria-hidden="true"
+          className="absolute inset-0"
+          style={{
+            background: "linear-gradient(90deg, rgba(35,17,82,0.95) 0%, rgba(35,17,82,0.7) 100%)",
+          }}
+        />
+        <Reveal className="relative z-10 mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+          <p className="font-display text-xs font-bold uppercase tracking-[0.3em] text-coral-500">
+            {home.playerStories.eyebrow}
+          </p>
+          <h2 className="mt-4 font-display text-3xl font-bold uppercase tracking-tight sm:text-4xl">
+            {home.playerStories.heading}
+          </h2>
+          <p className="mt-4 font-body text-base text-white/70 sm:text-lg">
+            {home.playerStories.body}
+          </p>
+          <a
+            href={home.playerStories.cta.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group mt-8 inline-flex items-center gap-3 rounded-full bg-coral-500 px-8 py-4 font-display text-sm font-bold uppercase tracking-widest text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,107,122,0.45)]"
+          >
+            <Play size={18} className="transition-transform duration-300 group-hover:scale-110" fill="currentColor" />
+            {home.playerStories.cta.label}
+          </a>
+        </Reveal>
       </section>
 
       {/* 3.7 Gallery */}

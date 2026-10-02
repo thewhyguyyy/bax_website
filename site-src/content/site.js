@@ -21,7 +21,7 @@ export const team = [
   {
     slug: "rohit-jhalani",
     name: "Rohit Jhalani",
-    role: "Co-Founder, Athlete Advisory",
+    role: "Athlete Advisory",
     category: "Athlete Development",
     descriptor:
       "14 yrs First-Class Cricketer; Ranji & Irani Trophy winner; mentor, India Men's Mixed Disability Team.",
@@ -95,11 +95,17 @@ export const team = [
 
 export const teamFootnote = "*In discussion — engagement to be formally confirmed.";
 
+// Full roster on the home carousel (was 4) so there's more to scroll through.
+// Ian Martin leads, Rohit Jhalani sits 4th, per BAX's ordering request.
 export const homeTeamSlugs = [
-  "rohit-jhalani",
+  "ian-martin",
   "abhai-singh",
-  "manish-tiwari",
   "shweta-choudhary",
+  "rohit-jhalani",
+  "manish-tiwari",
+  "jeet-vijay",
+  "anuraag-jaipuria",
+  "anish-somani",
 ];
 
 export const partners = [
@@ -149,21 +155,23 @@ export const events = [
     slug: "pd-champions-trophy-2025",
     title: "PD Champions Trophy 2025",
     year: "2025",
-    blurb: null, // PLACEHOLDER: event blurb needed from BAX
-    image: null, // PLACEHOLDER: assets/home/events/pd-champions-trophy-2025.jpg
+    blurb: "Champions earned, not given. Our athletes brought the trophy home.",
+    image: "/images/events/pd-champions-trophy-2025.jpg",
+    imageAlt: "Team BAX celebrating with the PD Champions Trophy 2025",
   },
   {
     slug: "mixed-disability-series-2026",
     title: "Mixed Disability Series 2026",
     year: "2026",
-    blurb: null, // PLACEHOLDER
-    image: null, // PLACEHOLDER
+    blurb: "India and England went toe-to-toe for the series trophy.",
+    image: "/images/events/mixed-disability-series-2026.jpg",
+    imageAlt: "India and England captains with the Mixed Disability Series trophy",
   },
   {
     slug: "pd-challengers-trophy-2024",
     title: "PD Challengers Trophy 2024",
     year: "2024",
-    blurb: null, // PLACEHOLDER: event description
+    blurb: "Stumps flying, athletes rising. Game on.",
     image: "/images/contact-hero.jpg", // confirmed authentic — "Challengers Trophy 2024" visible on the stumps
     imageAlt: "A bowled wicket at the PD Challengers Trophy 2024",
   },
@@ -186,8 +194,16 @@ export const home = {
   },
   who: {
     heading: "Who is Beyond Ability X?",
-    body: "Beyond Ability X is building India's first inclusive sports ecosystem for differently-abled athletes — spanning leagues, media, technology, grassroots development and commerce. India has produced world-class para athletes, but no ecosystem was built around them. We exist to change that: to take athletes from invisible to iconic, and give them recognition, platforms and sustainable livelihoods through sport.",
+    body: "India has produced world-class para athletes. It never built an ecosystem around them — until now. We're building leagues, media, tech, and grassroots development that turn athletes from invisible to iconic.",
     kicker: "They play for love of the game. We'll let them play for a living.",
+    image: { src: "/images/about-feat-1.jpg", alt: "A BAX athlete training on the field" },
+  },
+  playerStories: {
+    eyebrow: "Every Athlete Has A Story",
+    heading: "From the Vault: Human Behind the Sport",
+    body: "Real athletes. Real grit. The stories behind the scoreboard.",
+    cta: { label: "Watch the Series", href: "https://youtube.com/playlist?list=PLf7m0qWhDPg-UPyGgM7rfGpdoZwmZ9vT5" },
+    image: { src: "/images/about-feat-2.jpg", alt: "Close-up of a BAX team jersey" },
   },
   inAction: {
     heading: "In Action",
@@ -323,9 +339,9 @@ export const getInvolved = {
 export const contact = {
   heading: "Get in Touch.",
   image: { src: "/images/partnership-why.jpg", alt: "A BAX match in progress" },
-  // PLACEHOLDER: confirm real contact details
-  email: "[PLACEHOLDER: contact email]",
-  phone: "[PLACEHOLDER: phone number]",
+  email: "partnership@beyondabilityx.com",
+  phone: "+91 70116 71272",
+  // PLACEHOLDER: confirm office/city location
   location: "[PLACEHOLDER: city, country]",
   formFields: [
     { name: "name", label: "Name", required: true, autoComplete: "name" },
@@ -339,7 +355,7 @@ export const whatWeDo = {
   intro: {
     heading: "One platform. Multiple engines.",
     subhead:
-      "Every pillar strengthens the others — creating a defensible ecosystem around athletes, fandom, and inclusive sports infrastructure.",
+      "Every pillar fuels the next — built around athletes, fandom, and the future of inclusive sport.",
     image: { src: "/images/bp-3.jpg", alt: "A BAX fielder leaping for a catch" },
   },
   pillars: [
