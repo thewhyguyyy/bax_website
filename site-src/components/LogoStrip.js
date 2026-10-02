@@ -2,10 +2,10 @@ import Image from "next/image";
 
 export default function LogoStrip({ items }) {
   return (
-    <ul className="flex flex-wrap items-center justify-center gap-6 sm:gap-8">
+    <ul className="grid grid-cols-3 justify-items-center gap-3 sm:flex sm:flex-wrap sm:justify-center sm:gap-8">
       {items.map((item) => {
         const img = (
-          <div className="flex h-28 w-28 items-center justify-center rounded-2xl bg-white p-4 shadow-md ring-1 ring-indigo-900/5 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl sm:h-32 sm:w-32">
+          <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-white p-2.5 shadow-md ring-1 ring-indigo-900/5 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl sm:h-32 sm:w-32 sm:p-4">
             <Image
               src={item.logo}
               alt={item.name}
