@@ -6,8 +6,8 @@ export const nav = {
     { label: "Home", href: "/" },
     { label: "What We Do", href: "/what-we-do" },
     { label: "About Us", href: "/about" },
-    { label: "Get Involved", href: "/get-involved", primary: true },
     { label: "Contact Us", href: "/contact" },
+    { label: "Get Involved", href: "/get-involved", primary: true },
   ],
 };
 
@@ -114,21 +114,21 @@ export const partners = [
     name: "Physically Challenged Cricket Association of India",
     short: "PCCAI",
     logo: "/images/partners/pccai.png",
-    url: null,
+    url: "https://www.pccai.in",
   },
   {
     slug: "dcci",
     name: "Differently Abled Cricket Council of India",
     short: "DCCI",
-    logo: "/images/partners/dcci.jpg",
-    url: null,
+    logo: "/images/partners/dcci.png",
+    url: "https://www.dcci.tv",
   },
   {
     slug: "rdca",
     name: "Rajasthan Disable (Differently Abled) Cricket Association",
     short: "RDCA",
-    logo: "/images/partners/rdca.jpg",
-    url: null,
+    logo: "/images/partners/rdca.png",
+    url: "https://www.rdca.info",
   },
 ];
 
@@ -136,7 +136,8 @@ export const mission = {
   eyebrow: "Our Objective",
   headingPrefix: "We are ",
   headingHighlight: "ENABLERS.",
-  intro: "What we're committed to solving for — what they're fighting for.",
+  intro:
+    "What we're committed to solving for — what they're fighting for. Every athlete we work with is already fighting four battles: to be treated equally, seen for who they are, given the support they need, and paid for the work they do. We exist to win all four, every time.",
   pillars: [
     { title: "Equality", body: "Equal treatment, platforms, and rights." },
     { title: "Identity", body: "To be seen as athletes first — not defined by disability." },
@@ -193,8 +194,9 @@ export const home = {
     },
   },
   who: {
-    heading: "Who is Beyond Ability X?",
-    body: "India has produced world-class para athletes. It never built an ecosystem around them — until now. We're building leagues, media, tech, and grassroots development that turn athletes from invisible to iconic.",
+    eyebrow: "Why We Exist",
+    heading: "Why We Exist",
+    body: "India has produced world-class para athletes. It never built an ecosystem around them — until now. We're building the leagues, media, technology, and grassroots pipelines that turn raw talent into professional careers.",
     kicker: "They play for love of the game. We'll let them play for a living.",
     image: { src: "/images/about-feat-1.jpg", alt: "A BAX athlete training on the field" },
   },
@@ -206,12 +208,14 @@ export const home = {
     image: { src: "/images/about-feat-2.jpg", alt: "Close-up of a BAX team jersey" },
   },
   inAction: {
+    eyebrow: "On The Field",
     heading: "In Action",
   },
   associations: {
     heading: "In Association With",
   },
   gallery: {
+    eyebrow: "The Gallery",
     heading: "Moments",
     // PLACEHOLDER: additional gallery images — using existing site photography for now
     images: [
@@ -280,6 +284,7 @@ export const about = {
     closing: "They play for love of the game. We will let them play for a living.",
   },
   team: {
+    eyebrow: "The Team",
     heading: "The People Behind BAX",
   },
   partnerships: {

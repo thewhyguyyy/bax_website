@@ -5,12 +5,13 @@ import PillarCard from "@/components/PillarCard";
 import EventCard from "@/components/EventCard";
 import LogoStrip from "@/components/LogoStrip";
 import TeamCarousel from "@/components/TeamCarousel";
+import WhatWeDoCarousel from "@/components/WhatWeDoCarousel";
 import Gallery from "@/components/Gallery";
 import CTABand from "@/components/CTABand";
 import Reveal from "@/components/Reveal";
 import Link from "next/link";
 import { Play } from "lucide-react";
-import { home, events, partners, mission, team, homeTeamSlugs } from "@/content/site";
+import { home, events, partners, mission, team, homeTeamSlugs, whatWeDo } from "@/content/site";
 
 export const metadata = {
   title: "Beyond Ability X — Every Athlete Has a Story",
@@ -25,10 +26,13 @@ export default function HomePage() {
     <>
       <Hero />
 
-      {/* 3.2 Who is BAX */}
+      {/* 3.2 Why We Exist */}
       <section className="overflow-hidden bg-white py-20">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <Reveal>
+            <p className="mb-3 font-display text-xs font-bold uppercase tracking-[0.2em] text-coral-500">
+              {home.who.eyebrow}
+            </p>
             <h2 className="font-display text-3xl font-bold uppercase tracking-tight text-indigo-900 sm:text-4xl">
               {home.who.heading}
             </h2>
@@ -48,11 +52,31 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3.3 In Action */}
+      {/* What We Do teaser carousel */}
       <section className="bg-lavender-50 py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <SectionHeading eyebrow="One Platform" heading="What We Do" />
+          </Reveal>
+          <Reveal delay={0.1} className="mt-12">
+            <WhatWeDoCarousel pillars={whatWeDo.pillars} />
+          </Reveal>
+          <p className="mt-4 text-center">
+            <Link
+              href="/what-we-do"
+              className="font-display text-sm font-bold uppercase tracking-widest text-purple-600 underline-offset-4 transition-colors hover:text-coral-500 hover:underline"
+            >
+              See the full ecosystem →
+            </Link>
+          </p>
+        </div>
+      </section>
+
+      {/* 3.3 In Action */}
+      <section className="bg-white py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <SectionHeading heading={home.inAction.heading} />
+            <SectionHeading eyebrow={home.inAction.eyebrow} heading={home.inAction.heading} />
           </Reveal>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {events.map((event, i) => (
@@ -65,7 +89,7 @@ export default function HomePage() {
       </section>
 
       {/* 3.4 Credibility / Associations */}
-      <section className="bg-white py-16">
+      <section className="bg-lavender-50 py-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <p className="mb-10 text-center font-display text-xs font-bold uppercase tracking-[0.2em] text-indigo-900/50">
@@ -104,7 +128,7 @@ export default function HomePage() {
       <section className="bg-lavender-50 py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <SectionHeading heading="The People Behind BAX" />
+            <SectionHeading eyebrow="The Team" heading="The People Behind BAX" />
           </Reveal>
           <Reveal delay={0.1} className="mt-12">
             <TeamCarousel people={homeTeam} />
@@ -161,7 +185,7 @@ export default function HomePage() {
       <section className="bg-white py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <SectionHeading heading={home.gallery.heading} />
+            <SectionHeading eyebrow={home.gallery.eyebrow} heading={home.gallery.heading} />
           </Reveal>
           <Reveal delay={0.1} className="mt-12">
             <Gallery images={home.gallery.images} />

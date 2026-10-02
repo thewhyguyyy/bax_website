@@ -131,7 +131,7 @@ export default function AboutPage() {
       <section id="team" className="scroll-mt-20 bg-white py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <SectionHeading heading={about.team.heading} />
+            <SectionHeading eyebrow={about.team.eyebrow} heading={about.team.heading} />
           </Reveal>
           <div className="mt-14 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-4">
             {team.map((person, i) => (
