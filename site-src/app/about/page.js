@@ -133,11 +133,13 @@ export default function AboutPage() {
           <Reveal>
             <SectionHeading eyebrow={about.team.eyebrow} heading={about.team.heading} />
           </Reveal>
-          <div className="mt-14 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-14 flex flex-wrap justify-center gap-x-8 gap-y-14">
             {team.map((person, i) => (
-              <Reveal key={person.slug} delay={(i % 4) * 0.08}>
-                <PersonCard person={person} />
-              </Reveal>
+              <div key={person.slug} className="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1.5rem)]">
+                <Reveal delay={(i % 4) * 0.08}>
+                  <PersonCard person={person} />
+                </Reveal>
+              </div>
             ))}
           </div>
           <p className="mt-12 text-center font-body text-xs text-indigo-900/70">

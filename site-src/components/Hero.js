@@ -32,6 +32,7 @@ export default function Hero() {
         aria-hidden="true"
         className="absolute inset-0 h-full w-full scale-105 object-cover object-center"
       >
+        <source src="/videos/hero-promo-mobile.mp4" type="video/mp4" media="(max-width: 640px)" />
         <source src="/videos/hero-promo.mp4" type="video/mp4" />
       </video>
 

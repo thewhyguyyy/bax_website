@@ -5,13 +5,25 @@ import PillarCard from "@/components/PillarCard";
 import EventCard from "@/components/EventCard";
 import LogoStrip from "@/components/LogoStrip";
 import TeamCarousel from "@/components/TeamCarousel";
+import AthleteMarquee from "@/components/AthleteMarquee";
 import WhatWeDoCarousel from "@/components/WhatWeDoCarousel";
 import Gallery from "@/components/Gallery";
 import CTABand from "@/components/CTABand";
 import Reveal from "@/components/Reveal";
 import Link from "next/link";
 import { Play } from "lucide-react";
-import { home, events, partners, mission, team, homeTeamSlugs, whatWeDo } from "@/content/site";
+import {
+  home,
+  events,
+  partners,
+  mission,
+  team,
+  homeTeamSlugs,
+  whatWeDo,
+  athletes,
+  athletesSection,
+  impactStats,
+} from "@/content/site";
 
 export const metadata = {
   title: "Beyond Ability X — Every Athlete Has a Story",
@@ -53,6 +65,61 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* The BAX Athletes */}
+      <section className="bg-white py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <SectionHeading
+              eyebrow={athletesSection.eyebrow}
+              heading={athletesSection.heading}
+              intro={athletesSection.body}
+            />
+          </Reveal>
+          <div className="mt-12">
+            <AthleteMarquee athletes={athletes} />
+          </div>
+        </div>
+      </section>
+
+      {/* Impact stats */}
+      <section className="overflow-hidden bg-indigo-900 py-20 text-white">
+        <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+          <Reveal>
+            <p className="mb-3 font-display text-xs font-bold uppercase tracking-[0.2em] text-coral-500">
+              {impactStats.eyebrow}
+            </p>
+            <h2 className="font-display text-3xl font-bold uppercase tracking-tight sm:text-4xl">
+              {impactStats.heading}
+            </h2>
+            <div className="mt-8 grid grid-cols-3 gap-4">
+              {impactStats.stats.map((stat) => (
+                <div key={stat.label}>
+                  <p className="font-display text-3xl font-bold tracking-tight text-coral-500 sm:text-4xl">
+                    {stat.number}
+                  </p>
+                  <p className="mt-1 font-body text-xs text-white/70 sm:text-sm">{stat.label}</p>
+                </div>
+              ))}
+            </div>
+            <Link
+              href={impactStats.cta.href}
+              className="group mt-8 inline-flex items-center gap-2 font-display text-sm font-bold uppercase tracking-widest text-coral-500 underline-offset-4 transition-colors hover:text-white hover:underline"
+            >
+              {impactStats.cta.label}
+              <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+            </Link>
+          </Reveal>
+          <Reveal delay={0.15} className="relative aspect-[4/3] overflow-hidden rounded-3xl">
+            <Image
+              src={impactStats.image.src}
+              alt={impactStats.image.alt}
+              fill
+              className="object-cover"
+            />
+          </Reveal>
+        </div>
+      </section>
+
       {/* What We Do teaser carousel */}
       <section className="bg-lavender-50 py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -79,7 +146,7 @@ export default function HomePage() {
           <Reveal>
             <SectionHeading eyebrow={home.inAction.eyebrow} heading={home.inAction.heading} />
           </Reveal>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {events.map((event, i) => (
               <Reveal key={event.slug} delay={i * 0.1}>
                 <EventCard event={event} />

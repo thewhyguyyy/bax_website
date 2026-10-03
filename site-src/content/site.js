@@ -30,6 +30,15 @@ export const ctaBand = {
 
 export const team = [
   {
+    slug: "udit-jhalani",
+    name: "Udit Jhalani",
+    role: "Co-Founder, Tech & Brand",
+    category: "Technology & Brand",
+    descriptor: "Co-Founder leading BAX's technology platform and brand strategy.",
+    photo: "/images/team/udit-jhalani.jpg",
+    advisor: false,
+  },
+  {
     slug: "rohit-jhalani",
     name: "Rohit Jhalani",
     role: "Athlete Advisory",
@@ -107,8 +116,9 @@ export const team = [
 export const teamFootnote = "*In discussion — engagement to be formally confirmed.";
 
 // Full roster on the home carousel (was 4) so there's more to scroll through.
-// Ian Martin leads, Rohit Jhalani sits 4th, per BAX's ordering request.
+// Udit Jhalani (Co-Founder) leads, Ian Martin 2nd, Rohit Jhalani 5th, per BAX's ordering request.
 export const homeTeamSlugs = [
+  "udit-jhalani",
   "ian-martin",
   "abhai-singh",
   "shweta-choudhary",
@@ -118,6 +128,45 @@ export const homeTeamSlugs = [
   "anuraag-jaipuria",
   "anish-somani",
 ];
+
+// The playing squad — India's Men's Mixed Disability Cricket Team, BAX's flagship athlete group.
+export const athletes = [
+  { slug: "majid-magray", name: "Majid Magray", photo: "/images/team/athletes/majid-magray.jpg" },
+  { slug: "ravindra-sante", name: "Ravindra G. Sante", photo: "/images/team/athletes/ravindra-sante.jpg" },
+  { slug: "yogendra-singh", name: "Yogendra Singh", photo: "/images/team/athletes/yogendra-singh.jpg" },
+  { slug: "kunal-phanase", name: "Kunal D. Phanase", photo: "/images/team/athletes/kunal-phanase.jpg" },
+  { slug: "radhika-prasad", name: "Radhika Prasad", photo: "/images/team/athletes/radhika-prasad.jpg" },
+  { slug: "dependra-singh", name: "Dependra Singh", photo: "/images/team/athletes/dependra-singh.jpg" },
+  { slug: "akash-anil-patil", name: "Akash Anil Patil", photo: "/images/team/athletes/akash-anil-patil.jpg" },
+  { slug: "sunny-goyat", name: "Sunny Goyat", photo: "/images/team/athletes/sunny-goyat.jpg" },
+  { slug: "pawan-kumar", name: "Pawan Kumar", photo: "/images/team/athletes/pawan-kumar.jpg" },
+  { slug: "jithendra", name: "Jithendra", photo: "/images/team/athletes/jithendra.jpg" },
+  { slug: "narendra", name: "Narendra", photo: "/images/team/athletes/narendra.jpg" },
+  { slug: "rajesh", name: "Rajesh", photo: "/images/team/athletes/rajesh.jpg" },
+  { slug: "nikhil-manhas", name: "Nikhil Manhas", photo: "/images/team/athletes/nikhil-manhas.jpg" },
+  { slug: "amir-hassan", name: "Amir Hassan", photo: "/images/team/athletes/amir-hassan.jpg" },
+  { slug: "vikrant-keni", name: "Vikrant Keni", photo: "/images/team/athletes/vikrant-keni.jpg" },
+  { slug: "akhil-reddy", name: "Akhil Reddy", photo: "/images/team/athletes/akhil-reddy.jpg" },
+  { slug: "surendra", name: "Surendra", photo: "/images/team/athletes/surendra.jpg" },
+];
+
+export const athletesSection = {
+  eyebrow: "The BAX Athletes",
+  heading: "The Players Behind The Jersey",
+  body: "Built different. On the field and off it.",
+};
+
+export const impactStats = {
+  eyebrow: "The Impact So Far",
+  heading: "Numbers That Are Just Getting Started",
+  stats: [
+    { number: "3500+", label: "Registered Athletes" },
+    { number: "8+", label: "Programs In The Pipeline" },
+    { number: "5+", label: "Partnered Associations" },
+  ],
+  image: { src: "/images/impact-thumbsup.jpg", alt: "A BAX athlete giving a thumbs up in front of a Beyond Ability X banner" },
+  cta: { label: "Explore What We Do", href: "/what-we-do" },
+};
 
 export const partners = [
   {
@@ -164,6 +213,14 @@ export const mission = {
 
 export const events = [
   {
+    slug: "pd-challengers-trophy-2024",
+    title: "PD Challengers Trophy 2024",
+    year: "2024",
+    blurb: "Stumps flying, athletes rising. Game on.",
+    image: "/images/contact-hero.jpg", // confirmed authentic — "Challengers Trophy 2024" visible on the stumps
+    imageAlt: "A bowled wicket at the PD Challengers Trophy 2024",
+  },
+  {
     slug: "pd-champions-trophy-2025",
     title: "PD Champions Trophy 2025",
     year: "2025",
@@ -172,20 +229,20 @@ export const events = [
     imageAlt: "Team BAX celebrating with the PD Champions Trophy 2025",
   },
   {
+    slug: "divyam-awards",
+    title: "Divyam Awards",
+    year: "2025",
+    blurb: "Celebrating Indian differently-abled cricket on the biggest stage.",
+    image: "/images/roadmap/divyam-felicitation.jpg",
+    imageAlt: "A guest felicitating a BAX representative at the Divyam Awards",
+  },
+  {
     slug: "mixed-disability-series-2026",
     title: "Mixed Disability Series 2026",
     year: "2026",
     blurb: "India and England went toe-to-toe for the series trophy.",
     image: "/images/events/mixed-disability-series-2026.jpg",
     imageAlt: "India and England captains with the Mixed Disability Series trophy",
-  },
-  {
-    slug: "pd-challengers-trophy-2024",
-    title: "PD Challengers Trophy 2024",
-    year: "2024",
-    blurb: "Stumps flying, athletes rising. Game on.",
-    image: "/images/contact-hero.jpg", // confirmed authentic — "Challengers Trophy 2024" visible on the stumps
-    imageAlt: "A bowled wicket at the PD Challengers Trophy 2024",
   },
 ];
 
@@ -209,7 +266,7 @@ export const home = {
     heading: "Why We Exist",
     body: "India has produced world-class para athletes. It never built an ecosystem around them — until now. We're building the leagues, media, technology, and grassroots pipelines that turn raw talent into professional careers.",
     kicker: "They play for love of the game. We'll let them play for a living.",
-    image: { src: "/images/about-feat-1.jpg", alt: "A BAX athlete training on the field" },
+    image: { src: "/images/sante-diving-catch.jpg", alt: "Ravindra Sante diving for a catch in front of a Beyond Ability X banner" },
   },
   playerStories: {
     eyebrow: "Every Athlete Has A Story",
@@ -244,7 +301,7 @@ export const home = {
 };
 
 export const about = {
-  heroImage: { src: "/images/about-hero.jpg", alt: "BAX athletes warming up before a match" },
+  heroImage: { src: "/images/about-team-banner.jpg", alt: "The full BAX squad posing together in front of a Beyond Ability X banner" },
   reality: {
     eyebrow: "The Reality",
     headingPrefix: "One Para Athlete. ",
@@ -312,7 +369,7 @@ export const getInvolved = {
     subhead: "A new category is being built. Early believers will shape it.",
     image: { src: "/images/partnership-hero.jpg", alt: "A BAX athlete bowling mid-delivery" },
   },
-  waysImage: { src: "/images/about-feat-2.jpg", alt: "Close-up of a BAX team jersey" },
+  waysImage: { src: "/images/sante-diving-catch.jpg", alt: "A BAX athlete diving for a catch in front of a Beyond Ability X banner" },
   ways: [
     {
       slug: "invest",
@@ -374,7 +431,7 @@ export const whatWeDo = {
     heading: "One platform. Multiple engines.",
     subhead:
       "Every pillar fuels the next — built around athletes, fandom, and the future of inclusive sport.",
-    image: { src: "/images/bp-3.jpg", alt: "A BAX fielder leaping for a catch" },
+    video: { src: "/videos/whatwedo-intro.mp4", poster: "/images/whatwedo-intro-poster.jpg" },
   },
   pillars: [
     {
@@ -420,6 +477,78 @@ export const whatWeDo = {
       tag: "Merch & Retail",
     },
   ],
+  roadmap: {
+    eyebrow: "What's Next",
+    heading: "The Road Ahead",
+    subhead: "The pipeline of events and platforms BAX is building into, month by month.",
+    items: [
+      {
+        slug: "sri-lanka-vs-india",
+        title: "Sri Lanka vs India (WC + PD)",
+        window: "Tentative — October 2026",
+        role: "Media (Originals)",
+        image: "/images/roadmap/action-bowler-jump.jpg",
+      },
+      {
+        slug: "road-to-asia-cup",
+        title: "Road to Asia Cup — Scout",
+        window: "Mid-November 2026",
+        role: "Academy, Content",
+        image: "/images/roadmap/action-scout-closeup.jpg",
+      },
+      {
+        slug: "wc-chhattisgarh-series",
+        title: "WC Chhattisgarh Series",
+        window: "End of November 2026",
+        role: "Content, Leagues",
+        image: "/images/roadmap/action-batter.jpg",
+      },
+      {
+        slug: "high-performance-camp",
+        title: "High Performance Camp",
+        window: "End of November 2026",
+        role: "Academy (Training & Skilling), Content Rights",
+        image: "/images/roadmap/action-prosthetic-runner.jpg",
+      },
+      {
+        slug: "rise-bax-technology",
+        title: "Rise BAX Technology",
+        window: "Ongoing",
+        role: "Technology",
+        body: "Developing the athlete registry and community platform.",
+        image: "/images/roadmap/action-scout-duo.jpg",
+      },
+      {
+        slug: "before-asia-cup-camp",
+        title: "Before Asia Cup Camp (Pre-Series)",
+        window: "December 2026",
+        role: "Event Organising Rights",
+        image: "/images/roadmap/action-bowler-himachal.jpg",
+      },
+      {
+        slug: "asia-cup",
+        title: "Asia Cup",
+        window: "December 2026",
+        role: "Capacity Organizer",
+        image: "/images/roadmap/action-bowler-redyellow.jpg",
+      },
+      {
+        slug: "divyam-awards",
+        title: "Divyam Awards",
+        window: "December 2026 / January 2027 — date TBC",
+        role: "Organizer",
+        image: "/images/roadmap/divyam-felicitation.jpg",
+        secondaryImage: "/images/events/pd-champions-trophy-2025.jpg",
+      },
+      {
+        slug: "mixed-disability-series-england",
+        title: "Mixed Disability Series — England vs India",
+        window: "February 2027",
+        role: "Organizer",
+        image: "/images/events/mixed-disability-series-2026.jpg",
+      },
+    ],
+  },
   flagshipIPs: {
     heading: "Two Flagship IPs. One Global Sports Platform.",
     items: [

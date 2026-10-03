@@ -1,10 +1,11 @@
-import Image from "next/image";
 import { Trophy, GraduationCap, Clapperboard, PartyPopper, Cpu, ShoppingBag, Check } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import PillarCard from "@/components/PillarCard";
+import EventCard from "@/components/EventCard";
+import RoadmapTimeline from "@/components/RoadmapTimeline";
 import CTABand from "@/components/CTABand";
 import Reveal from "@/components/Reveal";
-import { whatWeDo } from "@/content/site";
+import { whatWeDo, events } from "@/content/site";
 
 export const metadata = {
   title: "What We Do",
@@ -35,13 +36,18 @@ export default function WhatWeDoPage() {
             </p>
           </Reveal>
           <Reveal delay={0.15} className="relative aspect-[4/3] overflow-hidden rounded-3xl">
-            <Image
-              src={whatWeDo.intro.image.src}
-              alt={whatWeDo.intro.image.alt}
-              fill
-              className="object-cover"
-              priority
-            />
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="none"
+              poster={whatWeDo.intro.video.poster}
+              aria-hidden="true"
+              className="absolute inset-0 h-full w-full object-cover"
+            >
+              <source src={whatWeDo.intro.video.src} type="video/mp4" />
+            </video>
           </Reveal>
         </div>
       </section>
@@ -60,6 +66,38 @@ export default function WhatWeDoPage() {
                 />
               </Reveal>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* What We've Done */}
+      <section className="bg-white py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <SectionHeading eyebrow="The Track Record" heading="What We've Done" />
+          </Reveal>
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {events.map((event, i) => (
+              <Reveal key={event.slug} delay={i * 0.1}>
+                <EventCard event={event} />
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* The Road Ahead */}
+      <section className="bg-lavender-50 py-20">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <SectionHeading
+              eyebrow={whatWeDo.roadmap.eyebrow}
+              heading={whatWeDo.roadmap.heading}
+              intro={whatWeDo.roadmap.subhead}
+            />
+          </Reveal>
+          <div className="mt-16">
+            <RoadmapTimeline items={whatWeDo.roadmap.items} />
           </div>
         </div>
       </section>
