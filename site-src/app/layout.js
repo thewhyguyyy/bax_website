@@ -24,11 +24,28 @@ export const metadata = {
     ],
     apple: "/icon-192.png",
   },
+  verification: {
+    google: "7YTCWXnF9iKfD1xkemmc0YTgFf7MHccW5Vy1-ETidwY",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="h-full antialiased">
+      <head>
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1ZMJTC39JH" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-1ZMJTC39JH');
+            `,
+          }}
+        />
+      </head>
       <body className="flex min-h-full flex-col">
         <a href="#main-content" className="skip-link">
           Skip to content
