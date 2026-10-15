@@ -27,13 +27,20 @@ export default function PrivacyPolicyPage() {
               <h2 className="font-display text-lg font-bold uppercase tracking-wide text-indigo-900">
                 {section.heading}
               </h2>
-              <div className="mt-3 space-y-3">
-                {section.body.map((paragraph, j) => (
-                  <p key={j} className="font-body text-base leading-relaxed text-indigo-900/70">
-                    {paragraph}
-                  </p>
-                ))}
-              </div>
+              {section.body.length > 1 ? (
+                <ul className="mt-3 space-y-2">
+                  {section.body.map((paragraph, j) => (
+                    <li key={j} className="flex gap-3 font-body text-base leading-relaxed text-indigo-900/70">
+                      <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-coral-500" aria-hidden="true" />
+                      <span>{paragraph}</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="mt-3 font-body text-base leading-relaxed text-indigo-900/70">
+                  {section.body[0]}
+                </p>
+              )}
             </Reveal>
           ))}
 
