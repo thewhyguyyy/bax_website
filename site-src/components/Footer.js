@@ -79,6 +79,10 @@ export default function Footer() {
           </p>
           <p className="mt-2 font-body text-xs text-white/50">
             © {new Date().getFullYear()} Beyond Ability X. All rights reserved.
+            {" · "}
+            <Link href="/privacy-policy" className="underline-offset-4 hover:text-white hover:underline">
+              Privacy Policy
+            </Link>
           </p>
         </div>
       </div>

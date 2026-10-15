@@ -582,3 +582,81 @@ export const whatWeDo = {
     ],
   },
 };
+
+export const privacyPolicy = {
+  lastUpdated: "October 15, 2026",
+  intro:
+    "Beyond Ability X (“BAX,” “we,” “us”) respects your privacy and is committed to protecting your personal information. This policy explains what we collect through beyondabilityx.com, how we use it, and the choices you have. It applies to this website and to the inquiry, partnership, and registration forms linked from it.",
+  sections: [
+    {
+      heading: "Information We Collect",
+      body: [
+        "Information you provide directly: when you submit a form on this site — Contact, Get Involved, or an athlete registration — we may collect your full name, email address, mobile number, city or district, organisation, sports interest, sports experience, and the content of your message.",
+        "Information collected automatically: we use Google Analytics to understand how visitors use the site. This can include your IP address, browser and device type, pages visited, referring URL, approximate location, and time spent on the site.",
+        "Information from advertising platforms: if you reach this site through a Google Ads or Meta (Facebook/Instagram) campaign, those platforms may use their own cookies or similar technologies to measure ad performance and attribution. We do not control these third-party cookies directly, but we may use the aggregated, non-identifying campaign data they provide to us.",
+      ],
+    },
+    {
+      heading: "How We Use Your Information",
+      body: [
+        "To respond to inquiries, partnership requests, and athlete registrations.",
+        "To contact you about para-sports opportunities, coaching, events, awards, community activities, and related updates.",
+        "To operate, maintain, and improve this website, and to understand how it's being used.",
+        "To measure and improve the effectiveness of our advertising on Google Ads and Meta Ads.",
+        "To comply with applicable legal obligations.",
+      ],
+    },
+    {
+      heading: "Cookies & Tracking Technologies",
+      body: [
+        "This site uses Google Analytics (via Google tag) to collect aggregate usage data. If you arrive via a Google Ads or Meta Ads campaign, those platforms may also place their own measurement cookies.",
+        "You can control or disable cookies through your browser settings, the Google Analytics Opt-out Browser Add-on, Google's Ad Settings, or Meta's Ad Preferences.",
+      ],
+    },
+    {
+      heading: "How We Share Your Information",
+      body: [
+        "We do not sell your personal information.",
+        "Form submissions are processed and stored through Google's infrastructure (Google Sheets, via Google Apps Script) solely to manage and respond to inquiries internally.",
+        "Aggregate or anonymised analytics and advertising data is shared with Google and Meta under their own respective privacy policies, strictly for the purposes described above.",
+        "We may disclose information where required by law, regulation, or legal process.",
+      ],
+    },
+    {
+      heading: "Data Retention",
+      body: [
+        "We retain personal information only for as long as reasonably necessary for the purposes described in this policy, or until you request that it be deleted.",
+      ],
+    },
+    {
+      heading: "Data Protection",
+      body: [
+        "We take reasonable technical and organisational steps to protect your information from unauthorized access, disclosure, or misuse. No method of transmission or storage over the internet is completely secure, and we cannot guarantee absolute security.",
+      ],
+    },
+    {
+      heading: "Your Choices",
+      body: [
+        "You may request to access, update, or delete the personal information you've shared with us, or opt out of further communications, at any time by contacting us at the email below.",
+      ],
+    },
+    {
+      heading: "Children's Privacy",
+      body: [
+        "Some athlete registrations may involve minors. Where this is the case, submission should be made by, or with the knowledge and consent of, a parent, guardian, or coach acting on the minor's behalf.",
+      ],
+    },
+    {
+      heading: "Third-Party Links",
+      body: [
+        "This site links to external platforms such as Instagram, LinkedIn, YouTube, and our athlete registration portal. Those platforms operate under their own privacy policies, which we encourage you to review.",
+      ],
+    },
+    {
+      heading: "Changes to This Policy",
+      body: [
+        "We may update this policy from time to time. The “Last updated” date at the top reflects the most recent revision.",
+      ],
+    },
+  ],
+};
