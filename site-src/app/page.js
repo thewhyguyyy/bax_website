@@ -26,7 +26,9 @@ import {
 } from "@/content/site";
 
 export const metadata = {
-  title: "Beyond Ability X — Every Athlete Has a Story",
+  title: "Disability Sports In India | Para Sports | Beyond Ability X",
+  description:
+    "Discover disability sports in India with Beyond Ability X — para sports, inclusive opportunities, and initiatives empowering athletes of every ability.",
 };
 
 export default function HomePage() {
